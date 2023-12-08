@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
 
@@ -10,8 +11,8 @@ namespace Puscas_Andrei_Ioan_Laborator2.Models
 
         [Display(Name = "Book Title")] // asa schimbam numele cartilor
         public string Title { get; set; }
-        // public string Author { get; set; }
-
+        //public string Author { get; set; }
+       
         [Column(TypeName = "decimal(6, 2)")] // asa punem valori cu 2 zecimale
         public decimal Price { get; set; }
         
@@ -20,8 +21,8 @@ namespace Puscas_Andrei_Ioan_Laborator2.Models
 
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; } //navigation property  
-        public int? AuthorsID { get; set; }
-        public Authors? Authors { get; set; }
-        public ICollection<Authors>? Author { get; set; } // navigation property ?
+        //public int? AuthorsID { get; set; }
+        //public Authors? Authors { get; set; }
+        public ICollection<Authors>? Name_Author  { get; set; } // navigation property 
     }
 }

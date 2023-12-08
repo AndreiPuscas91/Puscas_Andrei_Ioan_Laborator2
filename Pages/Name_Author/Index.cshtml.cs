@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Puscas_Andrei_Ioan_Laborator2.Data;
 using Puscas_Andrei_Ioan_Laborator2.Models;
 
-namespace Puscas_Andrei_Ioan_Laborator2.Pages.Author
+namespace Puscas_Andrei_Ioan_Laborator2.Pages.Name_Author
 {
     public class IndexModel : PageModel
     {
@@ -25,7 +25,9 @@ namespace Puscas_Andrei_Ioan_Laborator2.Pages.Author
         {
             if (_context.Authors != null)
             {
-                Authors = await _context.Authors.ToListAsync();
+                Authors = await _context.Authors
+                    .Include(c => c.Book)
+                    .ToListAsync();
             }
         }
     }
