@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Puscas_Andrei_Ioan_Laborator2.Data;
 
@@ -11,9 +12,10 @@ using Puscas_Andrei_Ioan_Laborator2.Data;
 namespace Puscas_Andrei_Ioan_Laborator2.Migrations
 {
     [DbContext(typeof(Puscas_Andrei_Ioan_Laborator2Context))]
-    partial class Puscas_Andrei_Ioan_Laborator2ContextModelSnapshot : ModelSnapshot
+    [Migration("20231209180518_Publishers")]
+    partial class Publishers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

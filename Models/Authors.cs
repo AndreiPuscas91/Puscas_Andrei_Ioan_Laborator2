@@ -7,6 +7,5 @@
         public string LastName { get; set; }
         public int? BookID { get; set; }
         public Book? Book { get; set; }
-        //public ICollection<Book>? Books { get; set; }
     }
 }

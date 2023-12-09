@@ -36,7 +36,7 @@ namespace Puscas_Andrei_Ioan_Laborator2.Pages.Books
                 return NotFound();
             }
             Book = book;
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
+            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName", "PublisherAdress");
             return Page();
         }
 

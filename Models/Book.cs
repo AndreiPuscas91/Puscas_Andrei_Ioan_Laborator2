@@ -21,8 +21,6 @@ namespace Puscas_Andrei_Ioan_Laborator2.Models
 
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; } //navigation property  
-        //public int? AuthorsID { get; set; }
-        //public Authors? Authors { get; set; }
         public ICollection<Authors>? Name_Author  { get; set; } // navigation property 
     }
 }

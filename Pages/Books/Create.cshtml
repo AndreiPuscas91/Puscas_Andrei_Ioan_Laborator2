@@ -30,7 +30,13 @@
                 <span asp-validation-for="Book.PublishingDate" class="textdanger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.PublisherID" class="control-label">Publisher Name</label>
+                <label asp-for="Book.PublisherID" class="control-label">PublisherName</label>
+                <select asp-for="Book.PublisherID" class="form-control" asp-items="ViewBag.PublisherID">
+                </select>
+                <span asp-validation-for="Book.PublisherID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.PublisherID" class="control-label">PublisherAdress</label>
                 <select asp-for="Book.PublisherID" class="form-control" asp-items="ViewBag.PublisherID">
                 </select>
                 <span asp-validation-for="Book.PublisherID" class="text-danger"></span>
